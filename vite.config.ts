@@ -1,5 +1,6 @@
 import { VitePWA } from 'vite-plugin-pwa';
 import { defineConfig } from 'vite'
+import path from "path";
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite';
 
@@ -18,8 +19,8 @@ export default defineConfig({
     },
 
     manifest: {
-      "name": "coffeeApp",
-      "short_name": "coffeeApp",
+      "name": "Perfect Pour",
+      "short_name": "Perfect Pour",
       "icons": [
         {
           "src": "icons/icon-48x48.png",
@@ -91,4 +92,9 @@ export default defineConfig({
       type: 'module',
     },
   })],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
 })
