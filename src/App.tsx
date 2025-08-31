@@ -1,36 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import appLogo from '/favicon.svg'
 import PWABadge from './PWABadge.tsx'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div className='flex'>
-        <a href="https://vite.dev" target="_blank">
-          <img src={appLogo} className="logo" alt="coffeeApp logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className='flex flex-col w-full py-4 gap-4 justify-center items-center'>
+        <h1 className='text-4xl w-fit p-2 border border-lime-400'>App Name</h1>
+        <div className='h-100 w-3/4 bg-lime-400 rounded-2xl shadow-lg'></div>
+        <div className='h-100 w-3/4 bg-fuchsia-400 rounded-2xl shadow-lg'></div>
+        <div className='h-100 w-3/4 bg-orange-400 rounded-2xl shadow-lg'></div>
+        <PWABadge />
       </div>
-      <h1>coffeeApp</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      <PWABadge />
-    </>
   )
 }
 
