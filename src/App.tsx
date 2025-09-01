@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Demo from "./demo"; // Assuming you have a Home component
 import RadarDemo from "./components/radarDemo";
+import { ShadcnDemo } from "./components/shadcnDemo";
 
 const router = createBrowserRouter([
   {
@@ -10,6 +11,10 @@ const router = createBrowserRouter([
   {
     path: "/radar",
     element: <RadarDemo />
+  },
+  {
+    path: "/shadcn",
+    element: <ShadcnDemo />
   }
 ]);
 

@@ -1,4 +1,5 @@
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Treemap } from 'recharts';
+import { TickItem } from 'recharts/types/util/types';
 
 const data = [
   {
@@ -38,7 +39,17 @@ const treeMapData = [
     ],
   },
 ];
+
+const ticks: number[] = [0, 2, 4, 6, 8, 10]
+
 const RadarDemo = () => {
+  const radarTicks = ticks.map((v, i) => (
+  {
+    value: v,
+    coordinate: v,
+    index: i
+  }
+))
   return (
     <div className='min-h-screen w-full'>
       <div className='h-100 w-full flex justify-center'>

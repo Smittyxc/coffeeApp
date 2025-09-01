@@ -38,6 +38,9 @@ const Demo = () => {
       <Link to="/radar">
         <Button variant='default' className=''>Radar</Button>
       </Link>
+      <Link to="/shadcn">
+        <Button variant='default' className=''>Shadcn</Button>
+      </Link>
       <PWABadge />
     </div>
   )
